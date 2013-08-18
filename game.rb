@@ -6,7 +6,7 @@
   guess = gets.chomp
   int = guess.to_i
 
-    if /(A-Fa-f)/.match(guess)  || int >= 1000 || int < 0
+    if /[^0-9]/.match(guess)  || int >= 1001 || int < 0
     print " Invalid input, must enter a number between 0 and 1000."
     can_guess_it
     else

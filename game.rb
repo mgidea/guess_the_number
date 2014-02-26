@@ -12,7 +12,7 @@ def can_guess_it
       counter(guesses, guess)
     else
       guess = guess.to_i
-      if guess >= (max + 1) || guess < 0
+      if guess > max || guess < 0
         wrong_data(max)
         guess = question_chomp(question)
         counter(guesses, guess)
